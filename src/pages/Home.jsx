@@ -96,7 +96,7 @@ const Home = () => {
         </div>
       </section>
       
-      Footer Section
+{/*       Footer Section */}
       {/* <footer>
         <div className="footerbox container">
           <div className="logo2">
