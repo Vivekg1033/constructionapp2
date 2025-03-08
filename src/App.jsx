@@ -38,7 +38,7 @@ const App = () => {
     <Router>
       <div>
         {/* Header Section */}
-        <header className="header" data-aos="fade-down">
+        {/* <header className="header" data-aos="fade-down">
           <div className="header-box container">
             <div className="logo">
               <Link to="/">Construction Machine Repair Service</Link>
@@ -54,7 +54,7 @@ const App = () => {
               <Link to="/SignupForm" className="btn2">Sign Up</Link>
             </div>
           </div>
-        </header>
+        </header> */}
 
         {/* Routes */}
         <Routes>

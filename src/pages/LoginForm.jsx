@@ -15,7 +15,7 @@ function LoginForm() {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
   if (isAuthenticated) {
-    return <Navigate to='/' />
+    return <Navigate to='/' />;
   }
 
   // Handle form submit
@@ -39,44 +39,66 @@ function LoginForm() {
   };
 
   return (
-    <div className="login-container">
-      <h2 className="login-header">Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="login-form-group">
+    <>
+      <div>
+        {/* Header Section */}
+        <header className="header" data-aos="fade-down">
+          <div className="header-box container">
+            <div className="logo">
+              <Link to="/">Construction Machine Repair Service</Link>
+            </div>
+            <nav className="menu">
+              <Link to="/" className="active">Home</Link>
+              <Link to="/repair">Book Repair</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/profile">Profile</Link>
+            </nav>
+            <div className="btn-box">
+              <Link to="/login" className="btn1">Login</Link>
+              {/* <Link to="/signup" className="btn2">Sign Up</Link> */}
+            </div>
+          </div>
+        </header>
+      </div>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}  // Directly updating the state
-            className="input"
-            required
-          />
-          <label className="login-label">Email</label>
-        </div>
+      <div className="login-container">
+        <h2 className="login-header">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="login-form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}  // Directly updating the state
+              className="input"
+              required
+            />
+            <label className="login-label">Email</label>
+          </div>
 
-        <div className="login-form-group">
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}  // Directly updating the state
-            className="input"
-            required
-          />
-          <label className="login-label">Password</label>
-        </div>
+          <div className="login-form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}  // Directly updating the state
+              className="input"
+              required
+            />
+            <label className="login-label">Password</label>
+          </div>
 
-        <button type="submit" className="button">Login</button>
-        <div className="login-register-link">
-          <p>
-            Don't have an account? <Link to={"/signup"}>Sign Up</Link>
-          </p>
-        </div>
-      </form>
-    </div>
+          <button type="submit" className="button">Login</button>
+          <div className="login-register-link">
+            <p>
+              Don't have an account? <Link to={"/signup"}>Sign Up</Link>
+            </p>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 

@@ -57,8 +57,8 @@ const ProfilePage = () => {
             <Link to="/profile">Profile</Link>
           </nav>
           <div className="btn-box">
-            <Link to="/login" className="btn1">Login</Link>
-            <Link to="/signup" className="btn2">Sign Up</Link>
+            {/* <Link to="/login" className="btn1">Login</Link> */}
+            {/* <Link to="/signup" className="btn2">Sign Up</Link> */}
           </div>
         </div>
       </header>

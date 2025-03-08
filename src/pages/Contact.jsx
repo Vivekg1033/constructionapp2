@@ -23,7 +23,7 @@ const ContactUs = () => {
           </nav>
           <div className="btn-box">
             <Link to="/login" className="btn1">Login</Link>
-            <Link to="/signup" className="btn2">Sign Up</Link>
+            {/* <Link to="/signup" className="btn2">Sign Up</Link> */}
           </div>
         </div>
       </header>
